@@ -1,0 +1,29 @@
+<div class="root">
+  <div class="voucher-container">
+    <div class="voucher-details">
+      <h1>Voucher</h1>
+      <div class="total-deposits">
+        <p class="price-lable">Total Bottles: {{ totalBottles }}</p>
+        <p class="price-lable">|</p>
+        <p class="price-lable">Total Cans: {{ totalCans }}</p>
+      </div>
+      <div class="price-information">
+        <p class="price-lable">Total Price:</p>
+        <p class="total-price">{{ totalPrice }}</p>
+      </div>
+      <p class="voucher-date">Voucher Date: {{ voucherDate }}</p>
+      <h1 class="instructions">Please show at the counter</h1>
+      <ngx-barcode6
+        [bc-format]="'CODE128'"
+        [bc-value]="voucherData"
+        [bc-height]="60"
+        [bc-width]="0.5"
+        [bc-display-value]="false">
+      </ngx-barcode6>
+    </div>
+    <button class="start-again-button" (click)="backToHome()">
+      Start Again
+    </button>
+  </div>
+</div>
+

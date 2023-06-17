@@ -1,0 +1,54 @@
+<div class="root">
+  <div class="vending-machine-container">
+    <div class="vending-machine-upper-container">
+
+      <div class="welcome-page-title">
+        Welcome to Recycling Vending Machine
+      </div>
+
+      <div class="button-container">
+        <button class="vending-machine-button" [ngStyle]="isButtonDisabled ? {'opacity': '0.2'} : {}" (click)="acceptBottle()">
+          Accept Bottle
+        </button>
+        <button class="vending-machine-button" [ngStyle]="isButtonDisabled ? {'opacity': '0.2'} : {}" (click)="acceptCan()">
+          Accept Can
+        </button>
+      </div>
+
+      <div class="total-deposits">
+        <div class="deposit-information">
+          <div class="deposit-label">Total Bottles</div>
+          <div class="deposit-value">{{ totalBottles }}</div>
+        </div>
+        <div class="deposit-information">
+          <div class="deposit-label">Total Cans</div>
+          <div class="deposit-value">{{ totalCans }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="isButtonDisabled" class="loading-animation-box">
+      <div class="loading-animation">
+        <ng-lottie
+          (animationCreated)="$event.setSpeed(3)"
+          [options]="{
+            path: './assets/animation/waiting.json',
+            renderer: 'svg',
+            autoplay: true,
+            loop: true
+          }">
+        </ng-lottie>
+      </div>
+    </div>
+
+    <div *ngIf="totalPrice != 0 && !isButtonDisabled" class="vending-machine-bottom-container">
+      <div class="price-information">
+        <div class="deposit-label">Total Price:</div>
+        <div class="deposit-value">{{ totalPrice }}</div>
+      </div>
+      <button class="vending-machine-button" (click)="getVoucher()">
+        Print Voucher
+      </button>
+    </div>
+  </div>
+</div>
