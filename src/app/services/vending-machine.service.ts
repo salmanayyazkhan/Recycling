@@ -57,7 +57,7 @@ export class VendingMachineService {
   }
 
   getLogDate(): string {
-    return new Date().toLocaleString('en-US', {timeZone: 'UTC'});
+    return new Date().toLocaleString('nb-NO', { timeZone: 'Europe/Oslo' });
   }
 
   resetValues() {

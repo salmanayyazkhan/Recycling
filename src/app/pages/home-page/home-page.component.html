@@ -1,5 +1,6 @@
 <div class="root">
   <div class="vending-machine-container">
+    <img class="icon" src="../../../assets/images/recycle-icon.svg" alt="no image">
     <div class="vending-machine-upper-container">
 
       <div class="welcome-page-title">
@@ -7,10 +8,12 @@
       </div>
 
       <div class="button-container">
-        <button class="vending-machine-button" [ngStyle]="isButtonDisabled ? {'opacity': '0.2'} : {}" (click)="acceptBottle()">
+        <button class="vending-machine-button" [ngStyle]="isButtonDisabled ? {'opacity': '0.2'} : {}"
+                (click)="acceptBottle()">
           Accept Bottle
         </button>
-        <button class="vending-machine-button" [ngStyle]="isButtonDisabled ? {'opacity': '0.2'} : {}" (click)="acceptCan()">
+        <button class="vending-machine-button" [ngStyle]="isButtonDisabled ? {'opacity': '0.2'} : {}"
+                (click)="acceptCan()">
           Accept Can
         </button>
       </div>
@@ -32,7 +35,7 @@
         <ng-lottie
           (animationCreated)="$event.setSpeed(2)"
           [options]="{
-            path: './assets/animation/waiting.json',
+            path: './assets/animation/loader.json',
             renderer: 'svg',
             autoplay: true,
             loop: true
@@ -46,7 +49,7 @@
         <div class="deposit-label">Total Price:</div>
         <div class="deposit-value">{{ totalPrice }}</div>
       </div>
-      <button class="vending-machine-button" (click)="getVoucher()">
+      <button class="vending-machine-print-button" (click)="getVoucher()">
         Print Voucher
       </button>
     </div>

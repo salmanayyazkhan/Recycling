@@ -24,7 +24,9 @@ export class VoucherComponent {
       this.backToHome();
     }
 
-    this.voucherDate = new Date().toLocaleString('en-US', {timeZone: 'UTC'});
+    this.voucherDate = new Date().toLocaleString('nb-NO', { timeZone: 'Europe/Oslo' });
+
+
   }
 
   calculateVoucherData() {
