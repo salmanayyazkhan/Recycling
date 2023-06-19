@@ -7,11 +7,9 @@
   text-align: center
 
 .voucher-container
-  display: flex
-  flex-direction: column
-  align-items: flex-end
-  @media screen and (width < 768px)
-    width: 400px
+  width: 80%
+  height: auto
+  max-width: 600px
 
 h1
   font: normal normal bold 24px/33px Biennale
@@ -19,7 +17,6 @@ h1
   opacity: 1
 
 .voucher-details
-  width: 600px
   height: 325px
   box-shadow: 0 3px 16px #00000012
   border-radius: 23px
@@ -52,6 +49,10 @@ h1
   font: normal normal 600 14px/20px Biennale
   color: #313552
   opacity: 1
+
+.voucher-bottom-container
+  display: flex
+  justify-content: flex-end
 
 .start-again-button
   width: 184px

@@ -30,7 +30,7 @@
     <div *ngIf="isButtonDisabled" class="loading-animation-box">
       <div class="loading-animation">
         <ng-lottie
-          (animationCreated)="$event.setSpeed(3)"
+          (animationCreated)="$event.setSpeed(2)"
           [options]="{
             path: './assets/animation/waiting.json',
             renderer: 'svg',

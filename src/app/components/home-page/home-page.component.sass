@@ -5,15 +5,16 @@
   justify-content: center
   height: 100vh
 
+.vending-machine-container
+  width: 80%
+  height: auto
+  max-width: 600px
+
 .vending-machine-upper-container
-  width: 600px
   height: 305px
   background: #FFFFFF 0 0 no-repeat padding-box
   box-shadow: 0 3px 16px #00000012
   border-radius: 23px
-
-.vending-machine-container
-  height: 400px
 
 .welcome-page-title
   color: #313552
@@ -60,7 +61,6 @@
 .vending-machine-bottom-container
   display: flex
   justify-content: space-between
-  align-items: center
   margin-top: 20px
 
 .price-information
@@ -71,11 +71,5 @@
   padding-left: 10px
 
 .loading-animation-box
-  position: fixed
-  top: 65%
-  left: 45%
-  text-align: center
-
-.loading-animation
-  align-self: center
-  padding: 20px 30px
+  display: flex
+  justify-content: center
